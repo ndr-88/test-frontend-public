@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(180deg, #c6e4e6 0%, rgba(224, 248, 252, 0) 100%);
+}
+
+/* Mobile */
+@media screen and (min-width: 360px) and (max-width: 1279px) {
+  h1 {
+    font-size: 29px;
+    letter-spacing: normal;
+    line-height: 40px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 22px;
+    letter-spacing: normal;
+    line-height: 40px;
+    font-weight: bold;
+  }
+}
+
+/* Desktop Medium */
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 40px;
+    letter-spacing: normal;
+    line-height: 52px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 36px;
+    letter-spacing: normal;
+    line-height: 52px;
+    font-weight: bold;
+  }
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+}

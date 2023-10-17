@@ -1,0 +1,18 @@
+<app-header
+  class="relative z-20"
+  [prevPage]="(info$ | async)?.prev"
+  [nextPage]="(info$ | async)?.next"
+  [total]="(info$ | async)?.pages"
+  (emitShowFilters)="applyBlurIfShowFilters($event)"
+></app-header>
+
+<app-characters-container
+  class="relative z-0"
+  [ngClass]="{ 'filter blur': showFilters,  }"
+  [charactersGetDTO]="
+    charactersGetDTO$
+      | async
+      | searchTerm : searchValue
+      | multiFilter : filterValues
+  "
+></app-characters-container>

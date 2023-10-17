@@ -1,0 +1,80 @@
+<div
+  class="search-container rounded-[100px] w-auto h-[73px] bg-white search-shadow flex flex-col overflow-visible items-center justify-between"
+>
+  <div class="flex flex-row relative h-full w-full justify-between">
+    <input
+      class="ml-[22px] bg-transparent w-1/2 outline-none"
+      type="text"
+      (input)="onInput($event)"
+      placeholder="Search a character"
+    />
+    <div class="flex mr-[22px] items-center">
+      <p class="font-bold text-filter mr-[14px]">FILTERS</p>
+      <img
+        *ngIf="!showFilters"
+        (click)="toggleShowFilters()"
+        class="cursor-pointer"
+        src="assets/filters.svg"
+        alt=""
+        width="22"
+        height="16"
+      />
+      <img
+        *ngIf="showFilters"
+        (click)="toggleShowFilters()"
+        class="cursor-pointer"
+        src="assets/xmark-solid.svg"
+        alt=""
+        width="15"
+        height="23"
+      />
+    </div>
+    <div
+      class="filter-section flex-col rounded-[30px] w-full bg-filter-screen pt-[100px] pb-[58px] pl-[41px] mt-[3px] absolute"
+      [ngClass]="showFilters ? 'flex' : 'hidden'"
+    >
+      <section>
+        <h2 class="font-bold text-filter">Gender</h2>
+        <div class="flex flex-row">
+          <app-filter
+            *ngFor="let gender of Gender | keyvalue"
+            class="mr-[10px]"
+            [name]="gender.value"
+            type="gender"
+            (emitSelected)="getSelected($event)"
+            (removeSelected)="removeSelected($event)"
+            [active]="genderValue === gender.value"
+          ></app-filter>
+        </div>
+      </section>
+      <section>
+        <h2 class="font-bold text-filter">Status</h2>
+        <div class="flex flex-row">
+          <app-filter
+            *ngFor="let state of Status | keyvalue"
+            class="mr-[10px]"
+            [name]="state.value"
+            type="status"
+            (emitSelected)="getSelected($event)"
+            (removeSelected)="removeSelected($event)"
+            [active]="statusValue === state.value"
+          ></app-filter>
+        </div>
+      </section>
+      <section>
+        <h2 class="font-bold text-filter">Species</h2>
+        <div class="flex flex-row">
+          <app-filter
+            *ngFor="let specie of Species | keyvalue"
+            class="mr-[10px]"
+            [name]="specie.value"
+            type="species"
+            (emitSelected)="getSelected($event)"
+            (removeSelected)="removeSelected($event)"
+            [active]="speciesValue === specie.value"
+          ></app-filter>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

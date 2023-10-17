@@ -1,0 +1,35 @@
+<div
+  class="h-[195px] w-full bg-white fixed grid grid-cols-3 items-center relative"
+>
+  <div class="flex justify-center">
+    <img src="assets/logo.svg" alt="Logo SVG" width="210" height="64" />
+  </div>
+  <div class="flex flex-row items-center justify-center">
+    <img
+      src="assets/arrow-left-solid.svg"
+      alt="arrow-left"
+      (click)="decreasePage()"
+      class="cursor-pointer"
+      [ngClass]="{ 'opacity-10 cursor-none': prevPage === null }"
+    />
+    <h1 class="mx-[18px] text-filter">
+      Page <span class="text-filter-page">{{ pageNr }}</span> of {{ total }}
+    </h1>
+    <img
+      src="assets/arrow-right-solid.svg"
+      alt="arrow-right"
+      (click)="increasePage()"
+      class="cursor-pointer"
+      [ngClass]="{ 'opacity-10 cursor-none': nextPage === null }"
+    />
+  </div>
+  <div class="flex justify-center">
+    <img src="assets/bars-solid.svg" width="26" height="28" />
+  </div>
+
+  <!--SEARCH -->
+  <app-search
+    class="absolute -bottom-[29px] left-[50%] -translate-x-1/2 w-full"
+    (emitShowFilters)="showFilters($event)"
+  ></app-search>
+</div>

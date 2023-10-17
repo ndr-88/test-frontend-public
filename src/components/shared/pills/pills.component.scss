@@ -1,0 +1,20 @@
+.bg-alive {
+  background: #daf0be;
+}
+
+.bg-dead {
+  background: #c81d25;
+}
+
+.bg-unknown {
+  background: #264653;
+}
+
+.text-dead,
+.text-unknown {
+  color: white;
+}
+
+.text-alive {
+  color: #446418;
+}

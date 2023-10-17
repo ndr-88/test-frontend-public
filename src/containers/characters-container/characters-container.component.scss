@@ -1,0 +1,86 @@
+/* Mobile */
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  /* Utilizza 4 colonne */
+  /* Margine: 20px | Gutter: 20px | Colonna: 65px | Min-width: 320px */
+  /* Aggiungi qui le tue regole CSS specifiche per il layout mobile */
+
+  .grid-container {
+    min-width: 320px;
+    margin: 0 20px;
+    grid-template-columns: repeat(4, 65px);
+    gap: 20px;
+  }
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Utilizza 8 colonne */
+  /* Margine: 32px | Gutter: 24px | Colonna: 76px | Min-width: 704px */
+  /* Aggiungi qui le tue regole CSS specifiche per il layout tablet portrait */
+
+  .grid-container {
+    min-width: 704px;
+    margin: 0 32px;
+    grid-template-columns: repeat(8, 76px);
+    gap: 24px;
+  }
+}
+
+/* Tablet Landscape */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* Utilizza 12 colonne */
+  /* Margine: 44px | Gutter: 24px | Colonna: 56px | Min-width: 936px */
+  /* Aggiungi qui le tue regole CSS specifiche per il layout tablet landscape */
+
+  .grid-container {
+    min-width: 936px;
+    margin: 0 44px;
+    grid-template-columns: repeat(12, 56px);
+    gap: 24px;
+  }
+}
+
+/* Desktop Medium */
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  /* Utilizza 12 colonne */
+  /* Margine: 42px | Gutter: 28px | Colonna: 74px | Min-width: 1196px */
+  /* Aggiungi qui le tue regole CSS specifiche per il layout desktop medium */
+
+  .grid-container {
+    min-width: 1196px;
+    margin: 0 42px;
+    grid-template-columns: repeat(12, 74px);
+    gap: 28px;
+  }
+}
+
+/* Desktop Large */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  /* Utilizza 12 colonne */
+  /* Margine: 76px | Gutter: 32px | Colonna: 78px | Min-width: 1288px */
+  /* Aggiungi qui le tue regole CSS specifiche per il layout desktop large */
+  .grid-container {
+    min-width: 1288px;
+    margin: 0 76px;
+    grid-template-columns: repeat(12, 78px);
+    gap: 32px;
+  }
+}
+
+/* Desktop xLarge */
+@media screen and (min-width: 1920px) {
+  /* Utilizza 12 colonne */
+  /* Margine: 88px | Gutter: 32px | Colonna: 116px | Min-width: 1744px */
+  /* Aggiungi qui le tue regole CSS specifiche per il layout desktop xLarge */
+
+  .grid-container {
+    min-width: 1744px;
+    margin: 0 88px;
+    grid-template-columns: repeat(12, 116px);
+    gap: 32px;
+  }
+}
+
+.grid-item {
+  grid-column: span 4;
+}

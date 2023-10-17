@@ -1,0 +1,11 @@
+<div
+  class="flex flex-col bg-white rounded-2xl overflow-hidden h-[643px] card-container"
+>
+  <img [src]="imgSrc" alt="" class="w-full" />
+  <div class="flex flex-col ml-[25px] mr-[15px]">
+    <h1 class="text-heading-color-700 mt-[15px]">{{ title }}</h1>
+    <p class="text-subtitle-color-700 font-bold">{{ subtitle }}</p>
+    <app-pill [text]="tag" class="my-[21px]"></app-pill>
+    <p class="text-description-color" [innerHTML]="description"></p>
+  </div>
+</div>

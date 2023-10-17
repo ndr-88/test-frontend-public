@@ -1,0 +1,19 @@
+<div
+  class="w-[101px] h-[30px] overflow-hidden rounded-[10px] justify-center items-center flex"
+  [ngClass]="{
+    'bg-alive': text === 'ALIVE',
+    'bg-dead': text === 'DEAD',
+    'bg-unknown': text === 'UNKNOWN'
+  }"
+>
+  <p
+    class="font-bold text-sm"
+    [ngClass]="{
+      'text-alive': text === 'ALIVE',
+      'text-dead': text === 'DEAD',
+      'text-unknown': text === 'UNKNOWN'
+    }"
+  >
+    {{ text }}
+  </p>
+</div>

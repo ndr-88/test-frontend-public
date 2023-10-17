@@ -1,0 +1,17 @@
+<div
+  class="rounded-[10px] border-solid border-filter border-[1px] h-[30px] min-w-[101px] overflow-hidden flex items-center justify-evenly cursor-pointer"
+  [ngClass]="active ? 'bg-filter' : 'bg-white'"
+  (click)="toggleActive()"
+>
+  <p class="font-bold" [ngClass]="active ? 'text-white' : 'text-filter'">
+    {{ name?.toUpperCase() }}
+  </p>
+  <img
+    *ngIf="active"
+    class="cursor-pointer"
+    src="assets/Vector.svg"
+    alt=""
+    width="10"
+    height="10"
+  />
+</div>

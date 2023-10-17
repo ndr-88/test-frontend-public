@@ -1,0 +1,18 @@
+<div
+  class="grid grid-container mx-[78px] justify-center pt-[78px] pb-[60px]"
+  infiniteScroll
+  [scrollWindow]="true"
+  (scrolled)="onScroll()"
+>
+  <ng-container *ngIf="charactersGetDTO?.length">
+    <app-card
+      class="grid-item"
+      *ngFor="let result of charactersGetDTO"
+      [title]="result.name"
+      [subtitle]="result.species + '-' + result.gender"
+      [imgSrc]="result.image"
+      [tag]="result.status"
+      [description]="getDescription(result)"
+    ></app-card>
+  </ng-container>
+</div>
