@@ -1,27 +1,25 @@
-# TestFrontend
+## Design
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
+Il design si trova alla [seguente pagina di Figma](https://www.figma.com/file/vP91H4eD6zzkH4XHd0wn1j/Rick-and-Morty?mode=dev). Nel tab "Design System" si trovano i diversi elementi del design system da implementare (font, colori, griglia). Nel tab "homepage" si trovano le schermate da sviluppare. La terza schermata è opzionale.
 
-## Development server
+## Obiettivi del test
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Gli obiettivi del test sono divisi in "**mandatory**" (ovvero quello che ci si aspetta per raggiungere la definition of done del test) e "**nice to have**" (bonus nel caso si finisca prima del previsto)
 
-## Code scaffolding
+- #### Mandatory
+- - Fetchare dalla [API di Rick And Morty](https://rickandmortyapi.com/) dei personaggi e mostrarli come da layout, stampando le informazioni in maniera corretta prestando particolare attenzione alla descrizione.
+- - Al click sulle frecce nella paginazione (precedente e successiva) si dovrà fetchare la pagina successiva della API e **aggiornare la UI** con i nuovi personaggi ottenuti.
+- - Inserendo un testo nella barra di ricerca sarà possibile **filtrare** il personaggio ottenuto in base al nome.
+- - Almeno **la griglia con i personaggi e la barra di ricerca devono seguire il design system** ed essere il più accurati possibile.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- #### Nice to have
+- - Chiara divisione dei componenti e del codice riutilizzabile, utilizzando una folder structure leggibile.
+- - Completare l'intera logica dei filtri, implementando anche quelli nella pagina 3 del Figma.
+- - Completare l'intera UI seguendo il design proposto.
+- - Creare una paginazione infinita così che i nuovi personaggi fetchati si vadano ad aggiungere a quelli già esistenti, scrollando il Documento nel punto giusto.
+- - Versione Mobile e/o Tablet
 
-## Build
+## Note
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Sarebbe opportuno utilizzare TypeScript.
+- Sarebbe opportuno effettuare vari commit ogni volta che si lavora ad una feature, utilizzando i conventional commits.
